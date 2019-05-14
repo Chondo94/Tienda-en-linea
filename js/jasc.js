@@ -14,4 +14,14 @@ function validateDecimal(valor) {
     }
 }
 
-
+<script>
+function myFunction() {
+  var txt = "";
+  if (document.getElementById("precio").validity.rangeOverflow) {
+    txt = "Value too large";
+  } else {
+    txt = "Escriba un precio razonable";
+  } 
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
