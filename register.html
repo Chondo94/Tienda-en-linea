@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<title></title>
 </head>
 <body>
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <div class="wrapper">
-    <h1>Actualizar</h1>
+    <h1>Registro</h1>
     <p>Llene los campos que se le piden a continuacion</p>
     <form class="form" method="post" action="">
-      <input type="text" class="name" placeholder="precio" required pattern="^\d*\.?\d*$">
+      <input type="text" class="name" placeholder="name" name="product_name" pattern="[a-zA-Z]{2,50}" onclick="validarte();"required>
+      <div>
+        <p class="name-help">escriba el nombre del producto que desea registrar</p>
+      </div>
+      <input type="text" name="precio" class="name" required pattern="^\d*\.?\d*$" placeholder="precio">
       <div>
         <p class="name-help">Precio del producto</p>
       </div>
@@ -20,9 +25,8 @@
     	  <option value="1">Activo</option>
     	  <option value="0">inactivo</option>
       </select>
-      <input type="submit" class="submit" value="Actualizar">
-      <br><br>
-      <button><a href="index.html">Inicio</a></button>
+      <input type="submit" class="submit" value="Registrar"><br><br>
+      <button><a href="index.html">Inicio</a></button><br><br>
     </form>
   </div>
 
