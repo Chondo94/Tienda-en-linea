@@ -11,14 +11,14 @@
   <h1>Registro</h1>
   <p>Llene los campos que se le piden a continuacion</p>
   <form class="form" method="post" action="">
-    <input type="precio" class="name" placeholder="precio">
+    <input type="precio" class="name" placeholder="precio" required pattern="^\d*\.?\d*$">
      <div>
       <p class="name-help">Precio del producto</p>
     </div>
-    <select>
+    <select required pattern="1||0">
     	<option></option>
-    	<option>Activo</option>
-    	<option>inactivo</option>
+    	<option value="1">Activo</option>
+    	<option value="0">inactivo</option>
     </select>
     <input type="submit" class="submit" value="Actualizar">
     <br><br>

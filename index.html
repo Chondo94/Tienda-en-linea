@@ -12,18 +12,18 @@
   <h1>Registro</h1>
   <p>Llene los campos que se le piden a continuacion</p>
   <form class="form" method="post" action="">
-    <input type="text" class="name" placeholder="name" name="product_name" pattern="[a-zA-Z]{2,50}" onclick="validarte();"required>
+    <input type="text" class="name" placeholder="name" name="product_name" required pattern="[a-zA-Z]{2,50}" onclick="validarte();"required>
     <div>
       <p class="name-help">escriba el nombre del producto que desea registrar</p>
     </div>
-    <input type="precio" class="name" placeholder="precio">
+    <input type="precio" class="name" placeholder="precio" required pattern="^\d*\.?\d*$">
      <div>
       <p class="name-help">Precio del producto</p>
     </div>
-    <select>
+    <select required pattern="1||0">
     	<option></option>
-    	<option>Activo</option>
-    	<option>inactivo</option>
+    	<option value="1">Activo</option>
+    	<option value="0">inactivo</option>
     </select>
     <input type="submit" class="submit" value="Registrar"><br><br>
     <button><a href="update.html">Actualizar</a></button><br><br>
